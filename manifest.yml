@@ -1,0 +1,6 @@
+---
+  applications :
+   - name : expense-tracker
+     memory: 1024M
+     instances: 1
+     path: target/expense-tracker-0.0.1-SNAPSHOT.jar
