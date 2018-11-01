@@ -11,17 +11,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Expense implements Serializable {
 	private static final long serialVersionUID = -6206270749033053237L;
 
-	@JsonProperty("expenseId")
 	@Id
+	@JsonProperty("expenseId")
 	private String expenseId;
+
 	@JsonProperty("amount")
 	private Double amount;
+
 	@JsonProperty("date")
 	private String date;
+
 	@JsonProperty("expenseDescription")
 	private String expenseDescription;
+
 	@JsonProperty("expenseType")
 	private String expenseType;
+
+	@JsonProperty("incurredBy")
+	private String incurredBy;
 
 	public String getExpenseId() {
 		return expenseId;
@@ -61,6 +68,14 @@ public class Expense implements Serializable {
 
 	public void setExpenseType(String expenseType) {
 		this.expenseType = expenseType;
+	}
+
+	public String getIncurredBy() {
+		return incurredBy;
+	}
+
+	public void setIncurredBy(String incurredBy) {
+		this.incurredBy = incurredBy;
 	}
 
 	@Override
